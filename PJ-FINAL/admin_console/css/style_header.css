@@ -1,0 +1,419 @@
+/*----------------- 1. General -----------------------*/
+@import url("https://fonts.googleapis.com/css?family=Rubik:400,500,700");
+html {
+    height: 100%;
+}
+body {
+    font-family: "Rubik", sans-serif;
+    font-size: 0.875rem;
+    color: #666;
+    background-color: #fafafa;
+    overflow-x: hidden;
+    height: 100%;
+}
+a:hover, a:active, a:focus {
+    text-decoration: none;
+    color: #009ce7;
+    outline: none;
+}
+a {
+    color: #009ce7;
+}
+button, a {
+    transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+}
+button {
+    outline: none;
+}
+/*----------------- 5. Header -----------------------*/
+.header {
+    background-color: #009efb;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1039;
+    height: 50px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+.header .header-left {
+    background-color: rgb(255, 255, 255);
+    float: left;
+    height: 50px;
+    padding: 0 20px;
+    position: relative;
+    text-align: center;
+    width: 230px;
+    z-index: 0;
+}
+
+.logo {
+    align-items: center;
+    display: flex;
+    height: 50px;
+    justify-content: center;
+}
+.logo span {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+.header .dropdown-toggle:after {
+    display: none;
+}
+.header .has-arrow .dropdown-toggle:after {
+    display: inline-block;
+}
+
+
+
+/* สลับภาษา */
+
+
+.language-switcher {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropbtn {
+    background-color: #009efb;
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.dropbtn img {
+    height: 20px;
+    width: auto;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:hover .dropbtn {
+    background-color: #007acc;
+}
+.mobile_btn {
+    display: none;
+}
+
+
+
+
+.user-menu {
+    margin: 0;
+    position: relative;
+    z-index: 99;
+}
+.user-menu.nav>li>a {
+    color: #fff;
+    font-size: 16px;
+    line-height: 50px;
+    padding: 0 15px;
+    height: 50px;
+}
+.user-menu.nav>li>a:hover, .user-menu.nav>li>a:focus {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.user-img {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+   /* จัดให้อยู่แนวเดียวกับเนื้อหา */
+}
+.header .user-img img {
+    width: 24px;
+}
+.user-img img {
+    display: block;
+}
+.user-img .status {
+    border: 2px solid #fff;
+    background-color: #ccc;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    bottom: 0;
+   /* ติดกับรูป */
+    right: 0;
+   /* ติดมุมขวาของรูป */
+}
+.user-menu .user-img .status {
+    bottom: 0px;
+}
+.user-menu .dropdown-menu {
+    min-width: 136px;
+}
+.status {
+    background-color: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+}
+.status.online {
+    background-color: #55ce63;
+}
+/*----------------- 42. Responsive -----------------------*/
+@media only screen and (min-width: 991px) {
+    #toggle_btn {
+        color: #009efb;
+        float: left;
+        font-size: 20px;
+        line-height: 50px;
+        padding: 0 10px;
+   }
+}
+@media only screen and (max-width: 991.98px) {
+    .header .header-left {
+        background-color: #030b47;
+        position: absolute;
+        width: 100%;
+   }
+    .mobile_btn {
+        display: block;
+   }
+    a.mobile_btn {
+        color: #fff;
+        font-size: 24px;
+        height: 50px;
+        left: 0;
+        line-height: 50px;
+        padding: 0 20px;
+        position: absolute;
+        top: 0;
+        width: 60px;
+        z-index: 10;
+   }
+    #toggle_btn {
+        display: none;
+   }
+   
+}
+@media only screen and (max-width: 767.98px) {
+    .header .has-arrow .dropdown-toggle>span:nth-child(2) {
+        display: none;
+   }
+    .header .has-arrow .dropdown-toggle:after {
+        display: none;
+   }
+}
+
+@media screen and (max-width: 768px) {
+   /* ปรับค่าขนาดหน้าจอที่ต้องการ */
+    .language-switcher {
+        display: none;
+   }
+}
+@media screen and (max-width: 992px) {
+   /* เมื่อหน้าจอเล็กกว่า 991px */
+    .language-switcher {
+        display: none;
+       /* ซ่อนปุ่มเปลี่ยนภาษา */
+   }
+}
+
+
+.btn-primary.active:not(:disabled):not(.disabled), .btn-primary:active:not(:disabled):not(.disabled) {
+    background-color: #009efb;
+    border-color: #009efb;
+    color: #fff;
+}
+.btn-outline-primary.active:not(:disabled):not(.disabled), .btn-outline-primary:active:not(:disabled):not(.disabled) {
+    background-color: #009efb;
+    border-color: #009efb;
+    color: #fff;
+}
+.dropdown-menu {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    transform-origin: left top 0;
+    box-shadow: inherit;
+    background-color: #fff;
+}
+.dropdown-menu {
+    font-size: 13px;
+}
+.dropdown-menu a {
+    display: block;
+    padding: 8px 16px;
+    color: #333;
+    text-decoration: none;
+}
+.dropdown-menu a:hover {
+    background-color: #f8f9fa;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.mobile-user-menu {
+    color: #007acc;
+    display: none;
+    font-size: 24px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 0;
+    width: 50px;
+    z-index: 10;
+}
+.mobile-user-menu > a {
+    color: #007acc;
+    padding: 0;
+}
+.mobile-user-menu > a:hover {
+    color: #0de7ff;
+}
+.mobile-user-menu > .dropdown-menu > a {
+    line-height: 23px;
+}
+
+@media only screen and (max-width: 575.98px) {
+    .mobile-user-menu {
+        display: block;
+   }
+   .user-menu {
+    display: none;
+}
+}
+
+
+
+
+
+
+
+
+
+
+/* ตั้งค่า Sidebar พื้นฐาน */
+.sidebar {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 230px;
+    height: 100%;
+    background-color: #ffffff;
+    color: #000000;
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: left 0.3s ease, transform 0.3s ease;
+    scrollbar-width: thin;
+    scrollbar-color: #b0bec5 #ffffff;
+}
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: #b0bec5;
+    border-radius: 3px;
+}
+
+/* เมนูใน Sidebar */
+.sidebar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar-menu .menu-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-menu li a {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: #000000;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.sidebar-menu li a i {
+    margin-right: 10px;
+    font-size: 18px;
+    color: #64b5f6;
+    align-items: center;
+    display: inline-flex;
+    font-size: 18px;
+    min-height: 24px;
+    line-height: 18px;
+    width: 20px;
+
+}
+
+.sidebar-menu li a:hover {
+    background-color: #727272;
+}
+
+/* สำหรับ Active Menu */
+.sidebar-menu li a.active {
+    background-color: #64b5f6;
+    color: #fff;
+}
+
+#toggle_btn {
+    color: #fff;
+    float: left;
+    font-size: 20px;
+    line-height: 50px;
+    padding: 0 10px;
+}
+
+
+/* CSS สำหรับ Active Class */
+.sidebar.active {
+    left: -250px;
+    transition: left 0.3s ease;
+}

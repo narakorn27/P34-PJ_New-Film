@@ -1,0 +1,58 @@
+:root {
+    --body-color: hsl(0deg 0% 100%);
+}
+
+
+main {
+    margin-top: 90px;
+    /* ให้เนื้อหาหลักอยู่หลัง navbar และ header (30px + 60px) */
+}
+
+
+
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.map-container {
+    margin-bottom: 3rem;
+    /* เพิ่มระยะห่างใต้แผนที่ */
+}
+
+.carousel-indicators {
+    margin-bottom: 0.1rem !important;
+}
+
+.carousel-indicators button {
+    background-color: #dcdcdc !important;
+
+}
+
+.carousel-indicators .active {
+    background-color: #2f70d9 !important;
+}
+
+
+.custom-mb {
+    margin-bottom: 4rem;
+}
+
+
+@media (min-width: 1200px) {
+    body {
+        padding-top: 0px; /* ปรับค่าตามต้องการ */
+    }
+}

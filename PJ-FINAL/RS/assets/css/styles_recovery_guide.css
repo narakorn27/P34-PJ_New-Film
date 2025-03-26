@@ -1,0 +1,285 @@
+:root {
+    --body-color: hsl(0deg 0% 100%);
+}
+
+.container-app {
+    background-color: #ffffff;
+    min-height: 100vh;
+}
+
+.head-first {
+    margin: 10px;
+    color: #1655B9;
+    font-weight: bold;
+    margin-top: 6rem;
+}
+
+.appointment-card {
+    background-color: white;
+    /* สีพื้นหลังของการ์ด */
+    color: #333;
+    /* สีข้อความ */
+    border-radius: 10px;
+    /* มุมโค้ง */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* เงาสำหรับการ์ด */
+    padding: 15px;
+    /* ระยะห่างภายในการ์ด */
+    margin-top: 5%;
+}
+
+.grey-card {
+    background-color: #dfdfdf;
+    /* สีพื้นหลังของการ์ดสีเทา */
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    /* กำหนดระยะห่างจากข้อความด้านบน */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* เงาเบาๆ */
+}
+
+.grey-card p {
+    font-size: 16px;
+    /* ขนาดตัวอักษรภายในการ์ดสีเทา */
+    color: #333;
+    /* สีตัวอักษร */
+}
+
+.new-appointment-card {
+    background-color: white;
+    /* สีพื้นหลังของการ์ด */
+    color: #333;
+    /* สีข้อความ */
+    border-radius: 10px;
+    /* มุมโค้ง */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* เงาสำหรับการ์ด */
+    padding: 15px;
+    margin-top: 5%;
+    margin-bottom: 2rem;
+}
+
+p.form-control {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.img-pro {
+    margin-left: 10px;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.patient-details {
+    align-items: center;
+    display: flex;
+}
+
+.divider {
+    border-top: 1px solid #ddd;
+    margin: 15px 0;
+}
+
+
+.text-detail {
+    font-size: 16px;
+    margin-left: 15px;
+    flex-direction: column;
+    color: #1655B9;
+}
+
+
+
+
+.container-fluid {
+    position: relative;
+}
+
+.section-content {
+    position: relative;
+    /* ใช้ relative แทน absolute */
+    background-color: #EFF1F5;
+    /* สีพื้นหลังเทาเข้ม */
+    padding: 10px;
+    /* ระยะห่างด้านใน */
+    border-radius: 10px;
+    /* มุมโค้ง */
+    max-width: 100%;
+    /* จำกัดความกว้างสูงสุด */
+    margin: 0 auto 0;
+    /* ย้ายขึ้นมาซ้อนภาพและจัดตรงกลาง */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    /* เงาให้ดูมีมิติ */
+    color: white;
+    /* สีข้อความ */
+    z-index: 10;
+    /* ทำให้กล่องอยู่บนสุด */
+    margin-bottom: 40px;
+    /* เพิ่มพื้นที่เพื่อหลบ navbar */
+    justify-content: center;
+    /* จัดให้อยู่ตรงกลางในแนวตั้ง */
+    min-height: 80vh;
+}
+
+.appointment-card .no-data {
+    text-align: center;
+    color: #72757A;
+    font-size: 16px;
+}
+
+.appointment-card .no-data img {
+    width: 50px;
+    margin-bottom: 8px;
+}
+
+
+
+.header-que {
+    background: #0046d5;
+    /* สีพื้นหลังฟ้า */
+    color: #ffffff;
+    /* สีข้อความ */
+    display: flex;
+    /* ใช้ Flexbox จัดการตำแหน่ง */
+    justify-content: space-between;
+    /* จัดซ้าย-ขวา */
+    align-items: center;
+    /* จัดกลางแนวตั้ง */
+    padding: 7px 7px;
+    /* ระยะห่างด้านใน */
+    border-top-left-radius: 10px;
+    /* โค้งมุมบนซ้าย */
+    border-top-right-radius: 10px;
+    /* โค้งมุมบนขวา */
+    font-size: 1.2rem;
+    /* ขนาดฟอนต์ */
+    font-weight: bold;
+    /* น้ำหนักฟอนต์ */
+}
+
+.header-que h1 {
+    color: #ffffff;
+    /* สีของลิงก์ */
+    font-size: 1.3rem;
+    /* ขนาดฟอนต์ลิงก์ */
+    margin-top: 10px;
+}
+
+.header-que a {
+    color: #ffffff;
+    /* สีของลิงก์ */
+    text-decoration: none;
+    /* ลบเส้นใต้ */
+    font-size: 15px;
+    /* ขนาดฟอนต์ลิงก์ */
+    background: rgba(255, 255, 255, 0.2);
+    /* สีพื้นหลังโปร่งใส */
+    padding: 5px 10px;
+    /* ระยะห่างภายในลิงก์ */
+    border-radius: 5px;
+    /* มุมโค้ง */
+    transition: background 0.3s;
+    /* เพิ่มเอฟเฟกต์เวลา hover */
+}
+
+.header-que a:hover {
+    background: rgba(0, 51, 255, 0.4);
+    /* เปลี่ยนสีพื้นหลังเมื่อ hover */
+}
+
+.content {
+    font-size: 1rem;
+    /* ขนาดฟอนต์ */
+    line-height: 1.5;
+    /* ระยะห่างบรรทัด */
+}
+
+
+.details {
+    text-align: center;
+    /* เปลี่ยนเป็น left-align เพื่ออ่านง่ายขึ้น */
+    padding: 15px;
+    background: #f9f9f9;
+    margin: 10px 0;
+}
+
+.details h2 {
+    font-size: 1.5rem;
+    color: #0046d5;
+    margin-bottom: 10px;
+}
+
+.details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.details ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+.queue {
+    text-align: center;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.queue-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #0046d5;
+}
+
+.queue-text {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* ทำให้ responsive */
+@media (max-width: 576px) {
+    .circle {
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .details {
+        padding: 10px;
+    }
+
+    .details h2 {
+        font-size: 1.5rem;
+    }
+
+    .details ul li {
+        font-size: 1.3rem;
+    }
+
+    .details p {
+        margin: 5px 0;
+        font-size: 1.3rem;
+        color: #555;
+    }
+
+    .queue-number {
+        font-size: 2.5rem;
+    }
+
+    .queue-text {
+        font-size: 0.9rem;
+    }
+}
+

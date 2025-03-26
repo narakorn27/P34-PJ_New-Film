@@ -1,0 +1,458 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+    --header-height: 3rem;
+
+    /*========== Colors ==========*/
+    --hue: 174;
+    --sat: 63%;
+    --first-color: hsl(var(--hue), var(--sat), 40%);
+    --first-color-alt: hsl(var(--hue), var(--sat), 36%);
+    --title-color: hsl(var(--hue), 12%, 15%);
+    --text-color: hsl(var(--hue), 8%, 35%);
+    --body-color: hsl(0deg 0% 67.4%);
+    --container-color: #FFF;
+
+    /*========== Font and typography ==========*/
+    --body-font: 'Open Sans', sans-serif;
+    --h1-font-size: 1.5rem;
+    --normal-font-size: .938rem;
+    --tiny-font-size: .625rem;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+
+    --navbar-height: 20px;
+    /* ความสูงของ Navbar */
+}
+
+@media screen and (min-width: 968px) {
+    :root {
+        --h1-font-size: 2.25rem;
+        --normal-font-size: 1rem;
+    }
+}
+
+/*=============== BASE ===============*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: var(--header-height) 0 0 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+
+
+
+.custom-nav__list,
+.custom-nav__link {
+    display: flex;
+}
+
+.custom-nav__link {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 4px;
+    color: var(--title-color);
+    font-weight: 600;
+}
+
+.custom-nav__list {
+    justify-content: space-around;
+}
+
+.custom-nav__name {
+    font-size: var(--tiny-font-size);
+    /* display: none;*/
+    /* Minimalist design, hidden labels */
+}
+
+.custom-nav__icon {
+    font-size: 1.5rem;
+}
+
+/*Active link*/
+.custom-active-link {
+    position: relative;
+    color: #1655b9;
+    transition: .3s;
+}
+
+/* Change background header */
+.custom-scroll-header {
+    box-shadow: 0 1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
+}
+
+/*=============== MEDIA QUERIES ===============*/
+/* For small devices */
+/* Remove if you choose, the minimalist design */
+@media screen and (max-width: 320px) {
+    .custom-nav__name {
+        display: none;
+    }
+}
+
+/* For medium devices */
+@media screen and (min-width: 576px) {
+    .custom-nav__list {
+        justify-content: center;
+        column-gap: 3rem;
+    }
+}
+
+
+
+
+
+
+
+
+/*=============== GLOBAL RESET FOR ELEMENTS TO OVERWRITE BOOTSTRAP =================*/
+ul {
+    list-style: none !important;
+    /* ใช้ !important เพื่อให้การตั้งค่าของเรามีผลมากกว่า */
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none !important;
+    /* ทำให้ลิงก์ไม่มีขีดเส้นใต้ */
+}
+
+/* img {
+    max-width: 100% !important;
+   
+    height: auto !important;
+} */
+
+
+
+/*=============== NAV ===============*/
+/* ปรับ Nav ให้ชิดขวาสุด */
+.custom-nav {
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* เพิ่ม padding ให้ nav */
+}
+
+
+.custom-container {
+    display: flex;
+    justify-content: flex-end; /* ทำให้เมนูไปชิดขวา */
+    width: 100%;
+}
+
+
+.custom-nav__img {
+    width: 32px;
+    height: 32px;
+    /* กำหนดความสูงเท่ากับความกว้าง เพื่อให้เป็นวงกลม */
+    border-radius: 50%;
+    /* ทำให้เป็นทรงกลม */
+    object-fit: cover;
+    /* ปรับให้ภาพคงที่ภายในกรอบ และไม่เสียสัดส่วน */
+}
+
+
+.custom-nav__logo {
+    color: var(--title-color);
+    font-weight: 600;
+}
+
+@media screen and (max-width: 767px) {
+    .custom-nav__menu {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background-color: var(--container-color);
+        box-shadow: 0 -1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
+        width: 100%;
+        height: 4rem;
+        padding: 0 1rem;
+        display: grid;
+        align-content: center;
+        border-radius: 1.25rem 1.25rem 0 0;
+        transition: .4s;
+    }
+}
+
+.custom-nav__list,
+.custom-nav__link {
+    display: flex;
+}
+
+.custom-nav__link {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 4px;
+    color: var(--title-color);
+    font-weight: 600;
+}
+
+.custom-nav__list {
+    justify-content: space-around;
+}
+
+.custom-nav__name {
+    font-size: var(--tiny-font-size);
+}
+
+.custom-nav__icon {
+    font-size: 1.5rem;
+}
+
+/* Active link */
+.custom-active-link {
+    position: relative;
+    color: #1655b9;
+    transition: .3s;
+}
+
+/* Change background header */
+.custom-scroll-header {
+    box-shadow: 0 1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
+}
+
+/*=============== MEDIA QUERIES ===============*/
+@media screen and (max-width: 320px) {
+    .custom-nav__name {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .custom-nav__list {
+        justify-content: center;
+        column-gap: 3rem;
+    }
+}
+
+@media (min-width: 767px) {
+    body {
+        padding-top: 0px!important;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    body {
+        margin: 0;
+    }
+    
+
+    .custom-header {
+        position: fixed;
+    }
+
+    .head-first {
+        margin-top: 1rem !important;
+    }
+
+    .custom-nav__img2 {
+        padding: 3px !important;
+        width: 20% !important;
+
+    }
+
+
+    .custom-nav__img {
+        display: none;
+    }
+
+    .custom-nav__icon {
+        display: none;
+    }
+
+    .custom-nav__name {
+        font-size: var(--normal-font-size);
+    }
+
+    .custom-nav__link:hover {
+        color: var(--first-color);
+    }
+
+    .custom-active-link::before {
+        content: '';
+        position: absolute;
+        bottom: -.75rem;
+        width: 4px;
+        height: 4px;
+        background-color: var(--first-color);
+        border-radius: 50%;
+    }
+
+    .custom-notification-bell {
+        top: 0px;
+        right: 45px;
+        font-size: 25px;
+        display: none;
+    }
+}
+
+
+
+
+
+/* ===============CUSTOM================= */
+.custom-navbar {
+    background-color: #1655b9;
+    height: var(--navbar-height);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 1000;
+    padding-bottom: 1rem;
+}
+
+.custom-header {
+    display: flex;
+    position: fixed;
+    margin-top: var(--navbar-height);
+    /* ดัน Header ตามความสูง Navbar */
+    left: 0;
+    width: 100%;
+    background-color: var(--container-color);
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+    /* การเปลี่ยนแปลงอย่างนุ่มนวล */
+    z-index: var(--z-fixed);
+    transition: .4s;
+    min-height: 49px; /* ปรับให้ header มีความสูงขั้นต่ำ */
+    max-height: 80px;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+}
+
+.custom-header.scrolling {
+    background-color: rgba(255, 255, 255, 0.8);
+    /* สีโปร่งใสเมื่อเลื่อน */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* เพิ่มเงา */
+}
+
+.custom-nav__img2 {
+    padding: 3px;
+    width: 60%;
+    /* หรือใช้ 20vw เพื่ออ้างอิงขนาดหน้าจอ */
+    object-fit: cover;
+    /* ครอบภาพให้พอดีกับ container */
+}
+
+
+/* Container to wrap the bell and the profile image */
+.custom-notification-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Notification bell style */
+.custom-notification-bell {
+    position: absolute;
+    top: -5px;
+    right: 40px;
+    /* Adjusted to move the bell to the right of the image */
+    font-size: 30px;
+    color: #000;
+    cursor: pointer;
+    animation: none;
+}
+
+/* Notification count badge */
+.custom-notification-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+
+/* Animation for shaking the bell */
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-10deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+
+    75% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(10deg);
+    }
+}
+
+.shake {
+    animation: shake 0.5s ease-in-out infinite;
+    /* สั่นตลอด */
+}
+
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .custom-notification-bell {
+        top: 0px;
+        right: 45px;
+        /* Adjusted for responsiveness */
+        font-size: 25px;
+    }
+}
+
+.custom-nav__icon {
+    width: 24px !important;
+    height: 25px !important;
+}
+
+
+
+@media (max-width: 320px) {
+    .custom-notification-count {
+        position: absolute;
+        top: -2px;
+        right: -6px;
+        background-color: red;
+        color: white;
+        border-radius: 50%;
+        font-size: 10px;
+        width: 15px;
+        height: 15px;
+        text-align: center;
+    }
+}

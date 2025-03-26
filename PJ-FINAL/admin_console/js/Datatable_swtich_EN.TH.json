@@ -1,0 +1,14 @@
+{
+    "en": {
+        "showEntries": "Show entries",
+        "showing": "Showing {start} to {end} of {total} entries",
+        "previous": "Previous",
+        "next": "Next"
+    },
+    "th": {
+        "showEntries": "แสดงรายการ",
+        "showing": "แสดง {start} ถึง {end} ของ {total} รายการ",
+        "previous": "ก่อนหน้า",
+        "next": "ถัดไป"
+    }
+}

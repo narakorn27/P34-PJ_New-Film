@@ -1,0 +1,111 @@
+main {
+    margin-top: 90px;
+    /* ให้เนื้อหาหลักอยู่หลัง navbar และ header (30px + 60px) */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header .info,
+.header .contact {
+    flex: 1;
+    padding: 20px;
+    color: white;
+}
+
+.header .info {
+    background: #007c89;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+}
+
+.header .contact {
+    background: #1655b9;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact a {
+    color: white;
+}
+
+.travel-section {
+    text-align: center;
+    padding: 40px 20px;
+    margin-bottom: 1rem;
+}
+
+.travel-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.travel-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+}
+
+.travel-box i {
+    font-size: 40px;
+    margin-bottom: 10px;
+    display: block;
+    /* บังคับให้ไอคอนแยกบรรทัด */
+}
+
+.travel-box h3 {
+    background: black;
+    color: white;
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 15px;
+}
+
+.header-title {
+    background: #005f73;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .travel-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -1,0 +1,70 @@
+:root {
+    --body-color: hsl(0deg 0% 100%);
+}
+
+
+main {
+    margin-top: 90px;
+    /* ให้เนื้อหาหลักอยู่หลัง navbar และ header (30px + 60px) */
+}
+
+
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 4rem;
+}
+
+h1 {
+    text-align: left;
+    font-size: 32px;
+    color: #333;
+}
+
+.date {
+    text-align: left;
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.history-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+p {
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.4;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.history-list {
+    margin: 20px 0;
+    padding-left: 25px;
+}
+
+.history-list li {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.doctor-list {
+    margin: 20px 0;
+    padding-left: 25px;
+}
+
+.doctor-list li {
+    font-size: 18px;
+    margin-bottom: 8px;
+}

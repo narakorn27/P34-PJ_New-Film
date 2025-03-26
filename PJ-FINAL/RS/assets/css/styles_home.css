@@ -1,0 +1,1220 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 4rem;
+
+  /*========== Colors ==========*/
+  --hue: 174;
+  --sat: 63%;
+  --first-color: hsl(var(--hue), var(--sat), 40%);
+  --first-color-alt: hsl(var(--hue), var(--sat), 36%);
+  --title-color: hsl(var(--hue), 12%, 15%);
+  --text-color: hsl(var(--hue), 8%, 35%);
+  --body-color: hsl(0deg 0% 67.4%);
+  ;
+  --container-color: #FFF;
+
+  /*========== Font and typography ==========*/
+  --body-font: 'Open Sans', sans-serif;
+  --h1-font-size: 1.5rem;
+  --normal-font-size: .938rem;
+  --tiny-font-size: .625rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --h1-font-size: 2.25rem;
+    --normal-font-size: 1rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.section {
+  padding: 4.5rem 0 2rem;
+}
+
+.section__title {
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.section__height {
+  height: 100vh;
+}
+
+/*=============== LAYOUT ===============*/
+.container {
+  max-width: 968px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+/*=============== HEADER ===============*/
+.header {
+  position: fixed;
+  top: 14px;
+  left: 0;
+  width: 100%;
+  background-color: var(--container-color);
+  z-index: var(--z-fixed);
+  transition: .4s;
+}
+
+/*=============== NAV ===============*/
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__img {
+  width: 32px;
+  border-radius: 50%;
+}
+
+.nav__img2 {
+  width: 235px;
+}
+
+.container.fullwidth {
+  max-width: 100%;
+  /* ลบข้อจำกัดความกว้าง */
+  margin: 0;
+  /* ลบ margin ซ้ายและขวา */
+}
+
+.section.fullheight {
+  height: 100vh;
+  /* ให้เต็มหน้าจอ */
+  padding: 0;
+  /* ลบ padding */
+}
+
+.fullwidth {
+  position: relative;
+  width: 100%;
+}
+
+.fullheight {
+  height: 100vh;
+}
+
+.img_banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* ทำให้ภาพครอบคลุมทั้งพื้นที่ */
+}
+
+.section-content {
+  position: absolute;
+  /* ใช้ position absolute เพื่อให้ทับซ้อนกับภาพ */
+  top: 220px;
+  /* ให้ยึดติดกับด้านบน */
+  left: 0;
+  /* เริ่มจากขอบด้านซ้าย */
+  width: 100%;
+  /* ขยายให้กว้างเต็มหน้าจอ */
+  height: auto;
+  /* ปรับความสูงตามเนื้อหา */
+  background-color: #EFF1F5;
+  /* สีพื้นหลังแบบโปร่งใส */
+  border-radius: 20px;
+  /* เพิ่มความโค้ง */
+  padding: 1rem;
+  /* เพิ่มระยะห่างภายใน */
+  display: flex;
+  flex-direction: column;
+  /* วางข้อความในแนวตั้ง */
+  justify-content: flex-start;
+  /* จัดให้อยู่ด้านบน */
+  padding-top: 0.5rem;
+  /* เพิ่มระยะห่างด้านบน */
+}
+
+.section-content h2 {
+  margin: 0.5rem 0;
+  /* เพิ่มระยะห่างระหว่างแต่ละ h2 */
+  text-align: left;
+  /* จัดข้อความให้อยู่ตรงกลาง */
+  color: #1655B9;
+  text-align: center;
+}
+
+.section-content p {
+  margin: 0.5rem 0;
+  /* เพิ่มระยะห่างระหว่างแต่ละ h2 */
+  text-align: center;
+  /* จัดข้อความให้อยู่ตรงกลาง */
+  color: #1655B9;
+}
+
+.section-systems {
+  position: absolute;
+  /* ใช้ position absolute เพื่อให้ทับซ้อนกับภาพ */
+  top: 750px;
+  /* ให้ยึดติดกับด้านบน */
+  left: 0;
+  /* เริ่มจากขอบด้านซ้าย */
+  width: 100%;
+  /* ขยายให้กว้างเต็มหน้าจอ */
+  height: 24vh;
+  /* ปรับความสูงตามเนื้อหา */
+  background-color: #ffffff;
+  /* สีพื้นหลังแบบโปร่งใส */
+  padding: 1rem;
+  /* เพิ่มระยะห่างภายใน */
+  display: flex;
+  flex-direction: column;
+  /* วางข้อความในแนวตั้ง */
+  justify-content: flex-start;
+  /* จัดให้อยู่ด้านบน */
+  padding-top: 1rem;
+  /* เพิ่มระยะห่างด้านบน */
+}
+
+.section-systems h2 {
+  text-align: left;
+  /* จัดข้อความให้อยู่ตรงกลาง */
+  color: #000000;
+}
+
+.icon-sys {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-sys {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  /* จัดข้อความให้อยู่ด้านบนของไอคอน */
+  gap: 20px;
+  /* ระยะห่างระหว่างกล่องแต่ละอัน */
+  margin-top: 1rem;
+}
+
+.content-checklist {
+  display: flex;
+  flex-direction: column;
+  /* จัดให้อยู่ในแนวตั้ง */
+  align-items: center;
+  /* กึ่งกลางในแนวนอน */
+  text-align: center;
+  /* จัดข้อความให้อยู่กลาง */
+}
+
+.content-checklist a {
+  color: #000000;
+  font-size: 20px;
+}
+
+.icon-treatment {
+  width: 40px;
+  /* กำหนดขนาดไอคอน */
+  height: 40px;
+  /* กำหนดขนาดไอคอน */
+  margin-bottom: 8px;
+  /* เพิ่มระยะห่างระหว่างไอคอนกับข้อความ */
+}
+
+
+.nav__logo {
+  color: var(--title-color);
+  font-weight: 600;
+}
+
+@media screen and (max-width: 767px) {
+  .section {
+    padding: 0;
+    /* ลบ padding ที่อาจสร้างช่องว่าง */
+  }
+
+  .img_banner {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .nav__menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: var(--container-color);
+    box-shadow: 0 -1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
+    width: 100%;
+    height: 4rem;
+    padding: 0 1rem;
+    display: grid;
+    align-content: center;
+    border-radius: 1.25rem 1.25rem 0 0;
+    transition: .4s;
+    height: 60px;
+  }
+}
+
+.nav__list,
+.nav__link {
+  display: flex;
+}
+
+.nav__link {
+  flex-direction: column;
+  align-items: center;
+  row-gap: 4px;
+  color: var(--title-color);
+  font-weight: 600;
+}
+
+.nav__list {
+  justify-content: space-around;
+}
+
+.nav__name {
+  font-size: var(--tiny-font-size);
+  /* display: none;*/
+  /* Minimalist design, hidden labels */
+}
+
+.nav__icon {
+  font-size: 1.5rem;
+}
+
+/*Active link*/
+.active-link {
+  position: relative;
+  color: var(--first-color);
+  transition: .3s;
+}
+
+/* Minimalist design, active link */
+/* .active-link::before{
+  content: '';
+  position: absolute;
+  bottom: -.5rem;
+  width: 4px;
+  height: 4px;
+  background-color: var(--first-color);
+  border-radius: 50%;
+} */
+
+/* Change background header */
+.scroll-header {
+  box-shadow: 0 1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
+}
+
+/*=============== MEDIA QUERIES ===============*/
+/* For small devices */
+/* Remove if you choose, the minimalist design */
+@media screen and (max-width: 320px) {
+  .nav__name {
+    display: none;
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 576px) {
+  .nav__list {
+    justify-content: center;
+    column-gap: 3rem;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  body {
+    margin: 0;
+  }
+
+  .section {
+    padding: 7rem 0 2rem;
+  }
+
+  .nav {
+    height: calc(var(--header-height) + 1.5rem);
+    /* 4.5rem */
+  }
+
+  .nav__img {
+    display: none;
+  }
+
+  .nav__img2 {
+    width: 200px;
+  }
+
+  .nav__icon {
+    display: none;
+  }
+
+  .nav__name {
+    font-size: var(--normal-font-size);
+    /* display: block; */
+    /* Minimalist design, visible labels */
+  }
+
+  .nav__link:hover {
+    color: var(--first-color);
+  }
+
+  /* First design, remove if you choose the minimalist design */
+  .active-link::before {
+    content: '';
+    position: absolute;
+    bottom: -.75rem;
+    width: 4px;
+    height: 4px;
+    background-color: var(--first-color);
+    border-radius: 50%;
+  }
+
+  /* Minimalist design */
+  /* .active-link::before{
+      bottom: -.75rem;
+  } */
+}
+
+/* For large devices */
+@media screen and (min-width: 1024px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+
+/*---home---*/
+
+.appointment-card {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 378px;
+  position: relative;
+  min-height: 51vh;
+}
+
+.appointment-card .no-data {
+  text-align: center;
+  color: #72757A;
+  font-size: 16px;
+}
+
+.appointment-card .no-data img {
+  width: 50px;
+  margin-bottom: 8px;
+}
+
+.header-que {
+  background: #0046d5;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.header-que h1 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.header-que a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.header-que a:hover {
+  color: #0d024f;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background: #0046d5;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  margin: 20px auto 10px;
+  flex-direction: column;
+}
+
+.circle span {
+  font-size: 0.8rem;
+}
+
+.details {
+  text-align: center;
+  padding: 10px 20px;
+  background: #f9f9f9;
+}
+
+.details p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.queue {
+  text-align: center;
+  padding: 20px;
+}
+
+.queue-number {
+  font-size: 3rem;
+  margin: 0;
+  color: #0046d5;
+}
+
+.queue-text {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.info-item {
+  text-align: center;
+}
+
+.info-item img {
+  width: 40px;
+  height: 40px;
+}
+
+.info-item p {
+  margin: 10px 0 0;
+  font-size: 0.8rem;
+}
+
+.patient-info {
+  padding: 20px;
+}
+
+.patient-info h1,
+.patient-info h2 {
+  margin: 0 0 10px;
+}
+
+.patient-info ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.patient-info li {
+  margin-bottom: 15px;
+}
+
+
+
+
+
+/* Default styles for desktop */
+.appointment-card {
+  width: 378px;
+  height: 56vh;
+  margin: 20px auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Tablet view */
+@media (max-width: 768px) {
+  .appointment-card {
+    width: 90%;
+    /* ใช้ 90% ของความกว้างหน้าจอ */
+    min-height: auto;
+  }
+
+  .circle {
+    width: 80px;
+    height: 80px;
+    font-size: 0.9rem;
+  }
+
+  .queue-number {
+    font-size: 2.5rem;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 480px) {
+  .appointment-card {
+    width: 100%;
+    /* เต็มความกว้างหน้าจอ */
+    padding: 10px;
+  }
+
+  .header-que {
+    font-size: 20px;
+    flex-direction: row;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .header-que h1 {
+    font-size: 18px;
+  }
+
+  .header-que a {
+    font-size: 0.8rem;
+  }
+
+  .circle {
+    width: 70px;
+    height: 70px;
+    font-size: 0.8rem;
+  }
+
+  .details h2 {
+    font-size: 1rem;
+  }
+
+  .queue-number {
+    font-size: 2rem;
+  }
+
+  .queue-text {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-checklist {
+    width: 100px;
+    /* ลดขนาดสำหรับหน้าจอที่เล็กลง */
+  }
+
+  .content-checklist p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .icon-sys {
+    gap: 10px;
+  }
+
+  .content-checklist {
+    width: 80px;
+    /* ลดขนาดสำหรับมือถือ */
+  }
+
+  .content-checklist img {
+    max-width: 48px;
+    max-height: 48px;
+  }
+
+  .content-checklist p {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 359px) {
+
+  .nav__img2 {
+    width: 200px;
+  }
+
+  .section.fullheight {
+    height: 80vh;
+    padding: 0;
+  }
+
+  .appointment-card {
+    width: 100%;
+    padding: 0 0 10px;
+    height: auto;
+  }
+
+  .section-content {
+    min-height: auto;
+    top: 74px;
+  }
+
+  .section-systems {
+    top: 68vh;
+
+  }
+
+  .header-que {
+    flex-direction: row;
+    text-align: center;
+    padding: 6px;
+  }
+
+
+  .circle {
+    width: 50;
+    height: 50;
+    margin: 5px auto 5px;
+  }
+
+  .circle strong,
+  .circle span {
+    font-size: 13px;
+  }
+
+
+  .details {
+    font-size: 10px;
+    padding: 1px auto;
+  }
+
+
+  .details h2 {
+    margin-top: 0rem;
+    padding: 0px;
+    font-size: 16px;
+  }
+
+  .details li {
+    font-size: 12px;
+  }
+
+  .details p {
+    font-size: 10px;
+    margin: 5px 0;
+    color: #555;
+  }
+
+  .queue {
+    padding: 0;
+  }
+
+  .queue h2 {
+    font-size: 20px;
+
+  }
+
+  .section-content p {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+
+
+  .section-systems h2 {
+    font-size: 12px;
+
+  }
+
+  .queue p {
+    font-size: 15px;
+
+  }
+
+  .queue p.queue-number {
+    font-size: 25px;
+    /* ขนาดตัวอักษรที่ต้องการ */
+  }
+
+
+
+
+  .icon-sys {
+    padding: 0;
+    gap: 30px;
+  }
+
+  .content-checklist {
+    width: 80px;
+    /* ลดขนาดสำหรับมือถือ */
+  }
+
+  .content-checklist img {
+    max-width: 48px;
+    max-height: 48px;
+  }
+
+  .content-checklist p {
+    font-size: 10px;
+    word-break: break-word;
+    /* ตัดคำที่ยาวเกิน */
+    text-overflow: ellipsis;
+    /* แสดง "..." เมื่อข้อความล้น */
+  }
+
+}
+
+
+@media (min-width: 375px) and (max-width: 380px) {
+
+  .section.fullheight {
+    height: 50vh;
+    padding: 0;
+  }
+
+  .appointment-card {
+    width: 100%;
+    padding: 0 0 10px;
+    height: auto;
+  }
+
+  .section-content {
+    height: 62vh;
+    top: 20px;
+  }
+
+  .section-systems {
+    top: 61vh;
+
+  }
+
+  .header-que {
+    flex-direction: row;
+    text-align: center;
+    padding: 6px;
+  }
+
+
+  .circle {
+    width: 50;
+    height: 50;
+    margin: 5px auto 5px;
+  }
+
+  .circle strong,
+  .circle span {
+    font-size: 13px;
+  }
+
+
+  .details {
+    font-size: 11px;
+    padding: 1px auto;
+  }
+
+
+  .details h2 {
+    margin-top: 0rem;
+    padding: 1px;
+    font-size: 16px;
+  }
+
+  .details li {
+    font-size: 10px;
+  }
+
+  .details p {
+    font-size: 10px;
+    margin: 5px 0;
+    color: #555;
+  }
+
+  .queue {
+    padding: 0;
+  }
+
+  .queue h2 {
+    font-size: 17px;
+
+  }
+
+  .section-content p {
+    font-size: 12px;
+  }
+
+
+  .section-systems h2 {
+    font-size: 12px;
+
+  }
+
+  .queue p {
+    font-size: 15px;
+
+  }
+
+  .queue p.queue-number {
+    font-size: 25px;
+    /* ขนาดตัวอักษรที่ต้องการ */
+  }
+
+
+
+
+  .icon-sys {
+    padding: 0;
+    gap: 35px;
+  }
+
+  .content-checklist {
+    width: 80px;
+    /* ลดขนาดสำหรับมือถือ */
+  }
+
+  .content-checklist img {
+    max-width: 48px;
+    max-height: 48px;
+  }
+
+  .content-checklist p {
+    font-size: 12px;
+    word-break: break-word;
+    /* ตัดคำที่ยาวเกิน */
+    text-overflow: ellipsis;
+    /* แสดง "..." เมื่อข้อความล้น */
+  }
+}
+
+
+@media (min-width: 414px) and (max-width: 420px) {
+  .appointment-card {
+    width: 100%;
+    padding: 0px;
+  }
+
+  .header-que {
+    flex-direction: row;
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+
+
+/* iPhone 12 Pro Max, 13 Pro Max, 14 Pro Max (428px) */
+@media (min-width: 415px) and (max-width: 428px) {
+  .section-systems {
+    top: 65vh;
+  }
+
+  .content-checklist {
+    width: 90px;
+  }
+}
+
+
+
+@media (min-width: 412px) and (max-width: 420px) {
+
+  .section.fullheight {
+    height: 80vh;
+    padding: 0;
+  }
+
+  .appointment-card {
+    width: 100%;
+    padding: 0px;
+    min-height: auto;
+  }
+
+  .section-content {
+    height: 69vh;
+    top: 115px;
+  }
+
+  .section-systems {
+    top: 70vh;
+    height: 20vh;
+
+  }
+
+  .header-que {
+    flex-direction: row;
+    text-align: center;
+    padding: 6px;
+  }
+
+
+  .circle {
+    width: 80px;
+    height: 80px;
+    margin: 10px auto;
+  }
+
+  .circle strong,
+  .circle span {
+    font-size: 15px;
+  }
+
+
+  .details {
+    font-size: 10px;
+    margin-top: 1rem;
+  }
+
+
+  .details h2 {
+    margin-top: 0px;
+    padding: 3px;
+    font-size: 25px;
+  }
+
+  .details li {
+    font-size: 15px;
+  }
+
+  .details p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #555;
+  }
+
+  .queue {
+    padding: 0;
+    margin: 1rem;
+  }
+
+  .queue h2 {
+    font-size: 25px;
+
+  }
+
+  .section-content p {
+    font-size: 15px;
+  }
+
+
+  .section-systems h2 {
+    font-size: 12px;
+
+  }
+
+  .queue p {
+    font-size: 15px;
+    margin-top: 1rem;
+
+  }
+
+  .queue p.queue-number {
+    font-size: 40px;
+    /* ขนาดตัวอักษรที่ต้องการ */
+  }
+
+
+  .icon-sys {
+    padding: 0;
+    gap: 50px;
+  }
+
+  .content-checklist {
+    width: 80px;
+    /* ลดขนาดสำหรับมือถือ */
+  }
+
+  .content-checklist img {
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+  .content-checklist p {
+    font-size: 12px;
+    word-break: break-word;
+    /* ตัดคำที่ยาวเกิน */
+    text-overflow: ellipsis;
+    /* แสดง "..." เมื่อข้อความล้น */
+  }
+
+  .icon-treatment {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 8px;
+  }
+
+}
+
+
+
+/*12pro 13pro */
+@media (min-width: 390px) and (max-width: 410px) {
+
+  .section.fullheight {
+    height: 80vh;
+    padding: 0;
+  }
+
+  .appointment-card {
+    width: 100%;
+    padding: 0px;
+    min-height: auto;
+  }
+
+  .section-content {
+    min-height: auto;
+    top: 95px;
+  }
+
+  .section-systems {
+    top: 70vh;
+    height: 20vh;
+
+  }
+
+  .header-que {
+    flex-direction: row;
+    text-align: center;
+    padding: 6px;
+  }
+
+
+  .circle {
+    width: 50;
+    height: 50;
+    margin: 5px auto 5px;
+  }
+
+  .circle strong,
+  .circle span {
+    font-size: 16px;
+  }
+
+
+  .details {
+    font-size: 10px;
+  }
+
+
+  .details h2 {
+    margin-top: 0px;
+    padding: 3px;
+    font-size: 25px;
+  }
+
+  .details li {
+    font-size: 15px;
+  }
+
+  .details p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #555;
+  }
+
+  .queue {
+    padding: 0;
+    margin: 1rem;
+  }
+
+  .queue h2 {
+    font-size: 25px;
+
+  }
+
+  .section-content p {
+    font-size: 15px;
+  }
+
+
+  .section-systems h2 {
+    font-size: 12px;
+
+  }
+
+  .queue p {
+    font-size: 15px;
+    margin-top: 1rem;
+
+  }
+
+  .queue p.queue-number {
+    font-size: 40px;
+    /* ขนาดตัวอักษรที่ต้องการ */
+  }
+
+
+  .icon-sys {
+    padding: 0;
+    gap: 50px;
+  }
+
+  .content-checklist {
+    width: 80px;
+    /* ลดขนาดสำหรับมือถือ */
+  }
+
+  .content-checklist img {
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+  .content-checklist p {
+    font-size: 10px;
+    word-break: break-word;
+    /* ตัดคำที่ยาวเกิน */
+    text-overflow: ellipsis;
+    /* แสดง "..." เมื่อข้อความล้น */
+  }
+
+  .icon-treatment {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 8px;
+  }
+
+}
+
+
+
+
+

@@ -1,0 +1,110 @@
+:root {
+    --body-color: hsl(0deg 0% 100%);
+}
+
+
+main {
+    margin-top: 90px;
+    /* ให้เนื้อหาหลักอยู่หลัง navbar และ header (30px + 60px) */
+}
+
+.carousel-item img {
+    height: 35vh;
+}
+
+/*=============== LAYOUT NEW EDIT ===============*/
+
+.container-app {
+    background-color: #FFF;
+    max-width: 100%;
+}
+
+
+.content-form {
+    max-width: 400px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.head-first {
+    font-size: 20px;
+    padding: 20px;
+    color: #1655B9;
+    margin-left: 0rem;
+}
+
+
+.divider {
+    border-top: 1px solid #ddd;
+    margin: 15px 0;
+}
+
+
+
+.icon-sys {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    /* ระยะห่างระหว่างไอคอน */
+}
+
+.content-checklist {
+    text-align: center;
+    flex: 1 1 30%;
+    /* ให้แต่ละรายการมีความกว้างที่ 30% และสามารถยุบขนาดได้ */
+    max-width: 150px;
+    /* กำหนดขนาดสูงสุดให้แต่ละรายการ */
+}
+
+.icon-treatment {
+    width: 40px;
+    /* กำหนดขนาดไอคอน */
+    height: 40px;
+    margin-bottom: 10px;
+    /* ระยะห่างระหว่างไอคอนกับข้อความ */
+}
+
+p {
+    font-size: 14px;
+    /* ขนาดฟอนต์ */
+    margin: 0;
+}
+
+
+/* เอาเส้นขีดใต้จาก <a> ทั้งหมด */
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+/* เพิ่มสีให้กับลิงก์เมื่อ hover */
+a:hover {
+    color: #1655b9;
+}
+
+
+@media (min-width: 1000px) {
+    .carousel-item img {
+        object-fit: cover;
+        max-width: 100%;
+        /* ลดขนาดภาพเหลือ 80% ของความกว้าง */
+        height: 100vh;
+        /* ปรับความสูงให้เหมาะสมกับสัดส่วน */
+    }
+}
+
+
+@media (max-width: 370px) {
+    .d-flex {
+        flex-direction: column;
+        align-items: center;
+        /* เพื่อให้ไอเท็มอยู่กลาง */
+    }
+}
